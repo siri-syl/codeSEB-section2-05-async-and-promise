@@ -38,6 +38,9 @@ function runPromise() {
     .then(highlightTitle)
     .then(sleep.bind(null, 2000))
     .then(resetTitle)
+    .catch(err => {
+      console.log(err);
+})
 }
 
 async function runAsync() {
